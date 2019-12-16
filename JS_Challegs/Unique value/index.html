@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unique Value</title>
+    <script>
+
+// Using Array and Obejct, String Method lastIndexOf()
+
+      /*Array way*/
+      //  function UniqueValue(str) {
+      //    let values = [];
+      //    for(let letter of str) { 
+      //     //console.log(values.indexOf(letter))
+      //     if(values.indexOf(letter) !== -1) {
+      //       return false
+      //     }
+      //     values.push(letter)
+      //    }
+      //    return true
+      //  }
+
+      /*Object way*/
+      //   function UniqueValue(str) {
+      //    let values = {};
+      //    for(let letter of str) { 
+      //     //console.log(values.indexOf(letter))
+      //     if(values[letter]) {
+      //       return false
+      //     }
+      //     values[letter] = "exist"
+      //    }
+      //    return values
+      //  }
+
+      /*String Method lastIndexOf*/
+      function UniqueValue(str) {
+        for(var i=0; i<str.length; i++) {
+          //console.log(str.lastIndexOf(str[i]))
+          if(str.lastIndexOf(str[i]) !== i) {
+            return false;
+          }
+        }
+        return true
+      }
+
+       console.log(UniqueValue("abcde"))
+       console.log(UniqueValue("abacdefb"))
+
+
+
+      //  function onlyUnique(value, index, self) { 
+      //       return self.indexOf(value) === index;
+      //   }
+
+      // usage example:
+      //var a = ['a', 1, 'a', 2, '1'];
+      //var unique = a.filter( onlyUnique ); // returns ['a', 1, 2, '1']
+
+
+      //var myArray = ['a', 1, 'a', 2, '1'];
+      //let unique = [...new Set(myArray)]; 
+
+
+      //var items = [4,5,4,6,3,4,5,2,23,1,4,4,4]
+      //var uniqueItems = Array.from(new Set(items))
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

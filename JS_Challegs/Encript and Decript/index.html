@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- another way with libaray -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <input placeholder="Type something" id="myinput" />
+    <button onclick="encrypt()">Encrypt</button>
+    <button onclick="decrypt()">Encrypt</button>
+    <div id="result"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+ <!-- another way with libaray -->
+    <p>-- another way with libaray --</p>
+     <form name="login" method="GET" style="width: 400px;" onsubmit="encryptForm();">
+        <input type="text" name="name" placeholder="name"><br><br>
+        <input type="text" name="reward" placeholder="reward"><br><br>
+        <input type="text" name="username" placeholder="username"><br><br>
+        <input type="password" name="password" placeholder="password">
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    <script>
+
+
+    function encryptForm() {
+        document.login.password.value = CryptoJS.MD5(document.login.password.value);
+    }
+    
+     function encrypt() {
+         var rawtext = document.getElementById("myinput").value;
+        //  var result = enc(rawtext);
+         var tempText = '';   
+         for(var i=0; i< rawtext.length; i++) {
+            tempText += enc(rawtext[i])
+         }
+         document.getElementById("result").innerHTML = tempText;
+
+     }
+
+     function decrypt() {
+         var rawtext = document.getElementById("myinput").value;
+        //  var result = enc(rawtext);
+         var tempText = '';   
+         for(var i=0; i< rawtext.length; i++) {
+            tempText += dec(rawtext[i])
+         }
+         document.getElementById("result").innerHTML = tempText;
+
+     }
+
+     function enc(x) {
+         switch(x) {
+             case "a" :
+                 return "x"
+                 break;
+             case "b" :
+                 return "y" 
+                 break;
+             case "c" :
+                 return  "z"
+                 break ;
+              case "d" :
+                  return "i"
+                  break;    
+         }
+
+     }
+
+     function dec(x) {
+         switch(x) {
+             case "x" :
+                 return "a"
+                 break;
+             case "y" :
+                 return "b" 
+                 break;
+             case "z" :
+                 return  "c"
+                 break ;
+              case "i" :
+                  return "d"
+                  break;    
+         }
+
+     }
+    
+    </script>
+    
+</body>
+</html>

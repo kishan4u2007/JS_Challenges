@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+
+      
+       //slice Method
+       function Mutation(arr) {
+           var firstWord = arr[0].toLowerCase();
+           var secondWord = arr[1].toLowerCase();
+           for(var i = 0; i<secondWord.length; i++) {
+               //if current letter doesnot exit in first letter
+               if(firstWord.indexOf(secondWord[i]) === -1) return false;
+           }
+
+        //    for(var letter of secondWord) {
+        //        //if current letter doesnot exit in first letter
+        //        if(firstWord.indexOf(letter) === -1) return false;
+        //    }
+
+           return true;
+      
+       }
+
+      
+
+       console.log(Mutation(["Hello", "hey"]));
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

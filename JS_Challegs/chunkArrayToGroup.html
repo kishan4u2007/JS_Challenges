@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+
+      
+       //slice Method
+       function chunkArrayToGroup(arr, size) {
+           var group = [];
+           while(arr.length > 0) {
+            group.push(arr.slice(0, size))
+                arr = arr.slice(size);
+           }
+           
+        return group;
+       }
+
+       //Splice Method
+       function chunkArrayToGroup(arr, size) {
+           var group = [];
+           while(arr.length > 0) {
+            group.push(arr.splice(0, size))
+                //arr = arr.slice(size);
+           }
+           
+        return group;
+       }
+
+       console.log(chunkArrayToGroup(["a", "b", "c", "d" ], 3));
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

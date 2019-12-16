@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const APIS = [
+            "https://jsonplaceholder.typicode.com/posts",
+            "https://jsonplaceholder.typicode.com/albums",
+            "https://jsonplaceholder.typicode.com/photos",
+            "https://jsonplaceholder.typicode.com/users"
+        ];
+
+        Promise.all(APIS.map(api => {
+            fetch(api).then(data => data.json())
+            .then(array => 
+              console.log("post", array[0]),
+              console.log("albums", array[0]),
+              console.log("photos", array[0]),
+              console.log("users", array[0]))
+        }))
+
+        ------------------------------------------------------------------------------------------
+
+
+        function who() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 200);
+  });
+}
+
+function what() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('lurks');
+    }, 300);
+  });
+}
+
+function where() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('in the shadows');
+    }, 500);
+  });
+}
+
+async function msg() {
+  const a = await who();
+  const b = await what();
+  const c = await where();
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg(); // 🤡 lurks in the shadows <-- after 1 second
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

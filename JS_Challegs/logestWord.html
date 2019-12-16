@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+        //first way
+       function logestWord(str) {
+           var words = str.split(" ");
+           var longest = '';
+           for(word of words){
+               //console.log(word)
+              if(word.length > longest.length)
+                 longest = word
+           }
+           return longest;
+       }
+
+       //Second Way
+    //    function logestWord(str) {
+    //        return str.split(" ").sort(function(a,b){
+    //          return b.length - a.length
+    //        })[0]
+           
+    //    }
+
+       console.log(logestWord("I am kishan Raikwar")) //true
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

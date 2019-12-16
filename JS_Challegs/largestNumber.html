@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+    
+       //Second Way
+       function largestOfFour(arr) {
+            var maxes = [];
+
+            for(var i=0; i<arr.length; i++) {
+                    var tempMax = arr[i][0];
+                     //console.log(tempMax)
+                   for(j=0; j<arr[i].length; j++) {
+                       var currentElem = arr[i][j];
+                       if(currentElem >= tempMax) {
+                            tempMax = currentElem
+                       }
+                    //console.log(arr[i][j])
+                   }
+                   maxes.push(tempMax)
+            }
+
+            return maxes
+           
+       }
+
+       console.log(largestOfFour([[4,5,3,2], [13,25,18,26], [32,35,37,39],  [1000,1001,857,1]])) //[5,26, 39, 1001]
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+
+      
+    function secondValue(arr) {
+        let values = [...new Set(arr)].sort((a, b) =>  {
+            return a - b
+        })
+        return values;
+    }
+
+    console.log(secondValue([1]))
+    //1
+    console.log(secondValue([4,2]))
+    //2, 4
+    console.log(secondValue([11,44, 22]))
+    // 11, 22, 44
+    console.log(secondValue([3,2, 88,3, -11, 67, 7]))
+    //-11,2,3,7,67,88 === 2, 67
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

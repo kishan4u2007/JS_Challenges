@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+
+     //counting duplicate letter - First Method
+      function getFrequency(string) {
+      var freq = {};
+      for (var i=0; i<string.length;i++) {
+          var character = string.charAt(i);
+        if (freq[character]) {
+            freq[character]++;
+          } else {
+            freq[character] = 1;
+          }
+      }
+      return freq;
+      };
+
+      //counting duplicate letter - Second Method
+      function countLetter(str) {
+          let tempArr = str.split(" ");
+          tempArr = tempArr.map(item => {
+            let tempItem = item.toLowerCase().split('');
+            return tempItem.reduce((acc, curr) => {
+              acc[curr] = acc[curr] ? acc[curr] + 1 : 1
+              if( acc[curr] > acc.max ) {
+                acc.max = acc[curr]
+              }
+              return acc
+            }, {max:1, word:item})
+          })
+
+          let amount = 1 ;
+          let word = '';
+          for(let item of tempArr) {
+            if(item.max > amount) {
+              amount = item.max
+              word = item.word
+            }
+          }
+
+          if(amount > 1) {
+            return word
+          }
+
+          return tempArr
+        }
+
+      console.log(countLetter("javascript is a greatest progamming languagesss"))
+     
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

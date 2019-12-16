@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+        //first way
+    //    function titleCase(str) {
+    //        var words = str.toLowerCase().split(" ");
+    //        for(var i=0; i<words.length; i++) {
+    //            words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+    //        }
+    //        return words.join(' ');
+     
+    //    }
+
+       //Second Way
+       function titleCase(str) {
+           return str.toLowerCase().split(" ").map(function(elem){
+             return elem[0].toUpperCase() + elem.slice(1)
+           }).join(" ")
+           
+       }
+
+       console.log(titleCase("I'm a little tea port")) //true
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

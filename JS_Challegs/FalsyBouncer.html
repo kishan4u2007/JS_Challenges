@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+
+      
+       //remove false value from array
+       function bouncer(arr) {
+
+           var result = [];
+
+           for( var i=0; i<arr.length; i++)  {
+            //if arr[i] truty
+               if(arr[i]) {
+                    result.push(arr[i])
+               } 
+           }
+        
+           return result;
+        
+           /*Second way 
+            return arr.filter(function(elem) {
+            return elem
+             })*/
+      
+       }
+
+
+      
+
+      
+
+       console.log(bouncer([7, "hey", "", false, 9]));
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

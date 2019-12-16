@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Sum</title>
+    <script>
+        /*JavaScript provides two similar looking String manipulation function, 
+        //substr and substring, though both are used to get substring from an String, 
+        there is a subtle difference between substring and substr method in JavaScript. If you look at 
+        there signature, both substr(to, length) and substring(to, from) */
+
+        function confirmEnding(str, target) {
+            if(str.endsWith(target)) {
+                return true
+            }
+            return false
+
+            //in one line
+            //return str.endsWith(target)
+        }
+
+        function confirmEnding(str, target) {
+            if(str.substr(-target.length)  === target ) {
+                return true
+            } return false  
+        }
+
+        console.log(confirmEnding("Bastain", "n"))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
